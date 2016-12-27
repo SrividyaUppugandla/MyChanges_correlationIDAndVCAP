@@ -19,7 +19,8 @@
 | HTTP           |Value|
 |----------------|--------------------------------------|
 |   status code |200 |
-|body   | will return body data based on type. ex:        {"Description":"Add the list of processors from the below.","Processor":[{"name":"Filter","id":"5a34e8ca1e3b438abaac3238fb4abc38","description":"Use the filter to create your custom filters to filter the data before being sent to the datalake.","issupported":true},{"name":"Transform","id":"423ebbe081b64d8ab23577256a539cd8","description":"Use the transform to create your custom expression for transforming the data that is sent to the datalake.","issupported":true},{"name":"Scriptable Transform","id":"619eb81935d44453a87f1fb943db86ee","description":"Use scriptable transform to provide your custom javascript that can transform the data before storing on to the datalake.","issupported":true}]}  |
+|body   | will return body data based on type. ex:        
+{"Description":"Add the list of processors from the below.","Processor":[{"name":"Filter","id":"5a34e8ca1e3b438abaac3238fb4abc38","description":"Use the filter to create your custom filters to filter the data before being sent to the datalake.","issupported":true},{"name":"Transform","id":"423ebbe081b64d8ab23577256a539cd8","description":"Use the transform to create your custom expression for transforming the data that is sent to the datalake.","issupported":true},{"name":"Scriptable Transform","id":"619eb81935d44453a87f1fb943db86ee","description":"Use scriptable transform to provide your custom javascript that can transform the data before storing on to the datalake.","issupported":true}]}  |
 
 
 - After all configuration is done, start the application and try 'YOUR_DOMAIN_URL' or 'YOUR_DOMAIN_URL'/catalog in the browser. For eg: http://localhost:3000/catalog or http://localhost:3000/
