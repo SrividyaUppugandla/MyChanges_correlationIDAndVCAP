@@ -15,7 +15,6 @@
 
 ### Response
 
-- With posthooks available
 
 | HTTP           |Value|
 |----------------|--------------------------------------|
