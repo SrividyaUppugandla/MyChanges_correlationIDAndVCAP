@@ -107,7 +107,7 @@
 |--------------|---------------------------------------------------------------------------------------|
 | Authorization  | token to authorize to domain    |
 | api_url  | api url ex: http://api.mvp2.cognizantone.org    |
-| orgguid  | id of organization. which you can get from above api    |
+| orgguid  | id of organization. which can get from above api    |
 
 ### Response
 
@@ -116,6 +116,35 @@
 |----------------|--------------------------------------|
 |   status code |200 |
 |body   | list of spaces for the organization.  |
+
+
+## GET /PaaSCatalog/appNameCheck
+- This API will for the existence of app based on appname provided for the provided domain
+
+### Request
+
+| Headers  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| Authorization  | token to authorize to domain    |
+| api_url  | api url ex: http://api.mvp2.cognizantone.org    |
+| spaceguid  | id of space. which can get from above api    |
+| appname  | name of the app to check    |
+
+### Response (If appname exists)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | {"Error":"App name is already taken"}  |
+
+### Response (If appname doesn't exist)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | {"Success":"Success"}  |
 
 
 - After all configuration is done, start the application and try 'YOUR_DOMAIN_URL' or 'YOUR_DOMAIN_URL'/catalog in the browser. For eg: http://localhost:3000/catalog or http://localhost:3000/
