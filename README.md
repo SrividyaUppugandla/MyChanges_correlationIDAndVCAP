@@ -207,4 +207,64 @@
 |body   | {"result":[{"guid":"b653f759-d04c-45ee-bb79-a0fdf7ba2a30","name":"free"}]}  |
 
 
+
+## POST /PaaSCatalog/insertData
+- This API will insert the data either to GIST or DB
+
+### Request
+
+| Headers  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| type  | type of data. If storage is DB in configuration file type will insert as datatype in db.   |
+| Content-Type  | application/json    |
+| body  | {"content":{Content to insert},"description":"gits description(this is optional)","filename":"gistfilename","filetype":"json"}    |
+
+
+### Response (if Storage is DB)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | { 'result': 'inserted successfully' }  |
+
+
+### Response (if Storage is GIST)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | gist result  |
+
+
+## POST /PaaSCatalog/updateData
+- This API will insert the data either to GIST or DB
+
+### Request
+
+| Headers  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| type  | type of data. If storage is DB in configuration file type will insert as datatype in db.   |
+| Content-Type  | application/json    |
+| body  | {"content":{Content to insert},"description":"gits description(this is optional)","filename":"gistfilename","filetype":"json"}    |
+
+
+### Response (if Storage is DB)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | { 'result': 'update successfully' }  |
+
+
+### Response (if Storage is GIST)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | gist result  |
+
 - After all configuration is done, start the application and try 'YOUR_DOMAIN_URL' or 'YOUR_DOMAIN_URL'/catalog in the browser. For eg: http://localhost:3000/catalog or http://localhost:3000/
