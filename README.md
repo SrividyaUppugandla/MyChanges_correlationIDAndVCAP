@@ -79,4 +79,23 @@
 |body   | {"regions":[{"id":"b3cf793fc9da4754bcdd0386b2d34177","name":"Default","api_url":"https://api.qa.cognizantone.org","login_url":"https://login.qa.cognizantone.org/oauth/token","host":"qa.cognizantone.org"},{"id":"3812805e5f7b11e68b7786f30ca893d3","name":"Dev","api_url":"https://api.cognizantone.org","login_url":"https://login.cognizantone.org/oauth/token","host":"cognizantone.org"},{"id":"2fafe8387fd847b4868e4b96f44912f8","name":"Global","api_url":"https://api.mvp2.cognizantone.org","login_url":"https://login.mvp2.cognizantone.org/oauth/token","host":"mvp2.cognizantone.org"}]}  |
 
 
+## GET /PaaSCatalog/organizations
+- This API will provide the organizations available in provided api
+
+### Request
+
+| Headers  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| Authorization  | token to authorize to domain    |
+| api_url  | api url ex: http://api.mvp2.cognizantone.org    |
+
+### Response
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | list of organizations available in domain  |
+
+
 - After all configuration is done, start the application and try 'YOUR_DOMAIN_URL' or 'YOUR_DOMAIN_URL'/catalog in the browser. For eg: http://localhost:3000/catalog or http://localhost:3000/
