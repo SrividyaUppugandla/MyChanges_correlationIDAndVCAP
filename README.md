@@ -183,4 +183,28 @@
 |body   | {"ExistingInstances":[{"guid":"908af5ab-92b5-468d-aa08-7e065ac98a32","name":"dffgmongodb"},{"guid":"8f32874c-2435-46c2-aa8f-a94b90d1f0a6","name":"PushMongo"}],"Plans":[{"guid":"87acfb26-de03-4b26-a122-b3823218c4ee","name":"Sandbox"},{"guid":"1683886c-555c-4bb3-91c6-504f7793e3b5","name":"Dedicated Single-Node"},{"guid":"3d87d632-8060-4237-bf13-c777bffaeced","name":"Shared Cluster"},{"guid":"b1dd543c-36e4-4b7b-9bae-4f21001fd1b7","name":"Dedicated Cluster"}]}  |
 
 
+## GET /PaaSCatalog/getdomainserviceplanguid
+- This API will get the plan guid of service.
+
+### Request
+
+| Headers  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| Authorization  | token to authorize to domain    |
+| api_url  | api url ex: http://api.mvp2.cognizantone.org    |
+| spaceguid  | id of space. which can get from above api    |
+| platformID  | Id of platform   |
+| regionID  | Id of region   |
+| categoryName  | name of service for which existing instances are needed   |
+| spacename  | space name   |
+
+### Response
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | {"result":[{"guid":"b653f759-d04c-45ee-bb79-a0fdf7ba2a30","name":"free"}]}  |
+
+
 - After all configuration is done, start the application and try 'YOUR_DOMAIN_URL' or 'YOUR_DOMAIN_URL'/catalog in the browser. For eg: http://localhost:3000/catalog or http://localhost:3000/
