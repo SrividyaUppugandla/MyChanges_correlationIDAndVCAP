@@ -213,10 +213,10 @@
 
 ### Request
 
-| Headers  |                  Description                                                          |
+| HTTP  |                  Description                                                          |
 |--------------|---------------------------------------------------------------------------------------|
-| type  | type of data. If storage is DB in configuration file type will insert as datatype in db.   |
-| Content-Type  | application/json    |
+| type  | type of data. If storage is DB in configuration file type will insert as datatype in db. This should be passed as header   |
+| Content-Type  | application/json as header   |
 | body  | {"content":{Content to insert},"description":"gits description(this is optional)","filename":"gistfilename","filetype":"json"}    |
 
 
@@ -243,10 +243,10 @@
 
 ### Request
 
-| Headers  |                  Description                                                          |
+| HTTP  |                  Description                                                          |
 |--------------|---------------------------------------------------------------------------------------|
-| type  | type of data. If storage is DB in configuration file type will insert as datatype in db.   |
-| Content-Type  | application/json    |
+| type  | type of data. If storage is DB in configuration file type will insert as datatype in db. This should be passed as header  |
+| Content-Type  | application/json as Header   |
 | body  | {"content":{Content to insert},"description":"gits description(this is optional)","filename":"gistfilename","filetype":"json"}    |
 
 
@@ -290,13 +290,71 @@
 | type  | type of data to delete. ex: loggers/category etc.  |
 
 
-### Response (if Storage is DB)
+### Response
 
 
 | HTTP           |Value|
 |----------------|--------------------------------------|
 |   status code |200 |
 |body   | { 'result': 'deleted successfully' }  |
+
+
+## POST /PaaSCatalog/updateregions
+- This API is to add/update the regions.
+
+### Request
+
+| HTTP  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| Content-Type  | application/json as header |
+| body  | {"platfomid":platformid,"regionid":"regionid","content":{},"type":"typeofdata"} |
+
+
+### Response (if Storage is DB)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | { 'result': 'update successfully' }  |
+
+
+### Response (if Storage is GIST)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | gist result  |
+
+
+## POST /PaaSCatalog/updateservicedetails
+- This API is to add/update the servicedetails.
+
+### Request
+
+| HTTP  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| Content-Type  | application/json as header |
+| body  | {"platfomid":"platformid","regionid":"regionid","categoryname":"categoryname","servicename":"servicename as in CF","type":"typeofdata"} |
+
+
+### Response (if Storage is DB)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | { 'result': 'update successfully' }  |
+
+
+### Response (if Storage is GIST)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | gist result  |
 
 
 
