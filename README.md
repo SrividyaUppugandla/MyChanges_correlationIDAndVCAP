@@ -98,4 +98,24 @@
 |body   | list of organizations available in domain  |
 
 
+## GET /PaaSCatalog/spaces
+- This API will provide the spaces of organization for the provided api
+
+### Request
+
+| Headers  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| Authorization  | token to authorize to domain    |
+| api_url  | api url ex: http://api.mvp2.cognizantone.org    |
+| orgguid  | id of organization. which you can get from above api    |
+
+### Response
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | list of spaces for the organization.  |
+
+
 - After all configuration is done, start the application and try 'YOUR_DOMAIN_URL' or 'YOUR_DOMAIN_URL'/catalog in the browser. For eg: http://localhost:3000/catalog or http://localhost:3000/
