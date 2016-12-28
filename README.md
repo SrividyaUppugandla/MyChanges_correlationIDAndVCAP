@@ -267,4 +267,37 @@
 |   status code |200 |
 |body   | gist result  |
 
+
+## POST /PaaSCatalog/data
+- This API will get DB data. This api applicable if storage in DB.
+
+### Response 
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | db data results  |
+
+
+## DELETE /PaaSCatalog/deleteData
+- This API will delete DB data. This is applicable if storage in DB.
+
+### Request
+
+| Headers  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| type  | type of data to delete. ex: loggers/category etc.  |
+
+
+### Response (if Storage is DB)
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | { 'result': 'deleted successfully' }  |
+
+
+
 - After all configuration is done, start the application and try 'YOUR_DOMAIN_URL' or 'YOUR_DOMAIN_URL'/catalog in the browser. For eg: http://localhost:3000/catalog or http://localhost:3000/
