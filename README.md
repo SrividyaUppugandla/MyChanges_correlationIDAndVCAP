@@ -13,7 +13,7 @@
 |--------------|---------------------------------------------------------------------------------------|
 | type  | type of the required data. ex: category/hooks/services...    |
 
-### Response
+### Response (/PaaSCatalog/catalog?type=processorType)
 
 
 | HTTP           |Value|
@@ -59,6 +59,24 @@
 |----------------|--------------------------------------|
 |   status code |200 |
 |body   | [{"name":"Authentication","description":"The Authentication microservice enables you to set up authentication function feature in your web or mobile app very quickly. Use protocols or providers of your choice and configure pre- and post auth hooks to add additional layer of security. You can also have the authentication microservice bound with a sample application code, customize the app in accordance to your business needs and push the app into a selected PaaS platform.","id":"d766af26-54a5-4d7e-b64b-e5ece3d02150","isNative":true,"platforms":[2004,2001,2002]},{"id":"d766af26-54a5-4d7e-b64b-e5ece3d02150","guid":"a90c6af0-2ed0-4b43-8cb6-9f6c908aef3c","url":"/v2/services/a90c6af0-2ed0-4b43-8cb6-9f6c908aef3c","redirectUrl":"https://console.ng.bluemix.net","created_at":"2014-12-23T02:56:49Z","updated_at":"2016-05-04T22:04:30Z","description":"Implement user authentication for your web and mobile apps quickly, using simple policy-based configurations.","name":"SingleSignOn","isNative":false,"regions":{"f4cf84f1edf94379a2ea2302bac3cd13":{"authorization_endpoint":"https://login.ng.bluemix.net"},"72b4fb87bb3941ca93fa9765fed7a010":{"authorization_endpoint":"https://login.eu-gb.bluemix.net"},"fab747df40d941f28bb219042a27c395":{"authorization_endpoint":"https://login.au-syd.bluemix.net"}},"platforms":[2002],"authorization_endpoint":"https://login.ng.bluemix.net"}]  |
+
+
+## GET /PaaSCatalog/regions?platformID=platformID
+- This API will provide the regions available for the particular platform
+
+### Request
+
+| Query Params  |                  Description                                                          |
+|--------------|---------------------------------------------------------------------------------------|
+| platform  | ID of platform. ex: 2004/2001    |
+
+### Response (/PaaSCatalog/regions?platformID=2004) 
+
+
+| HTTP           |Value|
+|----------------|--------------------------------------|
+|   status code |200 |
+|body   | {"regions":[{"id":"b3cf793fc9da4754bcdd0386b2d34177","name":"Default","api_url":"https://api.qa.cognizantone.org","login_url":"https://login.qa.cognizantone.org/oauth/token","host":"qa.cognizantone.org"},{"id":"3812805e5f7b11e68b7786f30ca893d3","name":"Dev","api_url":"https://api.cognizantone.org","login_url":"https://login.cognizantone.org/oauth/token","host":"cognizantone.org"},{"id":"2fafe8387fd847b4868e4b96f44912f8","name":"Global","api_url":"https://api.mvp2.cognizantone.org","login_url":"https://login.mvp2.cognizantone.org/oauth/token","host":"mvp2.cognizantone.org"}]}  |
 
 
 - After all configuration is done, start the application and try 'YOUR_DOMAIN_URL' or 'YOUR_DOMAIN_URL'/catalog in the browser. For eg: http://localhost:3000/catalog or http://localhost:3000/
